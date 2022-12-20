@@ -1,0 +1,24 @@
+# name: build and build-and-deploy
+
+# on:
+#   push:
+#     branches:
+#       - main
+# jobs:
+#   build-and-deploy:
+#     runs-on: ubuntu-18.04
+#     steps:
+#       - name: checkout
+#         uses: actions/checkout@main
+#         with:
+#           persist-credentials: false
+#       - name: install and build
+#         run: |
+#           npm install
+#           npm run build
+#       - name: deploy
+#         uses: JamesIves/github-pages-deploy-action@3.7.1
+#         with:
+#           github_token: ${{ secret.GITHUB_TOKEN }}
+#           branch: gh-pages
+#           folder: build
