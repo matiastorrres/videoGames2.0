@@ -17,7 +17,9 @@ export function Header() {
             alignItems="center"
           >
             <Typography>VideoGames</Typography>
-            <InputBase />
+            <Box fontStyle={{ backgroundColor: 'white' }}>
+              <InputBase />
+            </Box>
             <Button color="inherit">Login</Button>
           </Box>
         </Container>

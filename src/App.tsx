@@ -1,14 +1,11 @@
-import Prueba from './components/Prueba/Prueba';
-import CssBaseline from '@mui/material/CssBaseline';
-import { Header } from './components/Header/Header';
+import { Route, Routes } from 'react-router-dom';
+import { Home } from './page/Home/Home';
 
 function App() {
   return (
-    <div>
-      <CssBaseline />
-      <Header />
-      <Prueba />
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+    </Routes>
   );
 }
 

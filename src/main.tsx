@@ -1,11 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import './index.css';
-import axios from 'axios';
-axios.defaults.baseURL = import.meta.env.VITE_API;
+import { BrowserRouter } from 'react-router-dom';
+import CssBaseline from '@mui/material/CssBaseline';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { grey } from '@mui/material/colors';
+
+let theme = createTheme({
+  palette: {
+    primary: {
+      main: grey[800],
+    },
+    secondary: {
+      main: '#edf2ff',
+    },
+  },
+});
+
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <App />
+      </ThemeProvider>
+    </BrowserRouter>
   </React.StrictMode>
 );
